@@ -1,9 +1,9 @@
-#output {
+/* #output {
     text-align: center;
     padding: 23px;
     background-color:white;
     height: 30%;
-  }
+  } */
 /* 
 
 
@@ -27,7 +27,7 @@
    
 
 
- .calculator {
+ /* .calculator {
     width: 500px;
     height: 650px;
     margin: auto;
@@ -75,4 +75,4 @@
    }
    .btn.clear{
     margin-left: 180px;
-   }
+   } */

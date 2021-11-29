@@ -1,22 +1,11 @@
-let sum = "";
-
-function addToSum(operator){
-    sum = sum ;
-    console.log(sum);
-    document.getElementById("output").innerText = sum;
-}
-
-function evaluateSum(){
-    sum = eval(sum);
-    document.getElementById("output").innerText = sum;
+function bmi(){
+    let weight=document.getElementById("weight").value;
+    let height=document.getElementById("height").value;
+    let answer = weight/(height**2);
+    document.getElementById("ideal").value = answer;
 }
 
 function clearSum(){
-sum = "";
-document.getElementById("output").innerText = sum;
-}
-
-function deleteChar(){
-    sum = sum.slice(0, -1);
-    document.getElementById("output").innerText = sum;
-}
+    answer = "";
+    document.getElementById("ideal").value = answer;
+    }
