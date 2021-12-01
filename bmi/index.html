@@ -11,37 +11,40 @@
   
      <div class="container border border-secondary border-5">
       <div class="row text-center">
-        <h3>BMI Calculator</h3>
-        Weight(in Kilograms)
+        <h1>BMI Calculator</h1>
+        <h5>Weight(in Kilograms)</h5>
         <input
           type="float"
           id="weight"
           placeholder="Weight in kg"
         />
         <br />
-        Height (in centimetres)
+       <h5> Height (in centimetres)</h5>
         <input
           type="float"
           id="height" class="clear"
           placeholder="Height in cm"/>
         <br>
-        Gender
+        <h5>Gender</h5>
          <select name="Gender"id="Gender">
          <option value="disabled">...choose</option>
-        <option value="Male">Male</option>
+        <option value="Male" onclick="disableAge">Male</option>
         <option value="Female">Female</option>
          </select>
 
         <br>
-        Age
+       <h5>Age</h5>
         <input class="clear" type="float" id="Age" placeholder="Age"/>
         <br>
         <input type="button" onclick="bmi()" value="Evaluate"/>
         <br>
-        BMI
+       <h5> BMI</h5>
         <input disabled id="answer" class="clear" type="text" placeholder="BMI"/>
         <br>
-        Category
+        <h5>IDEAL  BMI</h5>
+        <input disabled id="idealAnswer" class="clear" type="text" placeholder=" IDEAL BMI"/>
+        <br>
+       <h5>Category</h5>
         <input disabled class="clear" type="text" id="category" placeholder="Category"/>
         <br>
         <!-- <input type="reset" value="Reset"/> -->

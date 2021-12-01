@@ -1,20 +1,10 @@
-// function bmi(){
-//     let weight=document.getElementById("weight").value;
-//     let height=document.getElementById("height").value;
-//     let answer = weight/(height**2);
-//     document.getElementById("ideal").value = answer;
-// }
-
-
-
-    
 function bmi() {
 
     let weight = parseFloat(document.getElementById("weight").value); // To get weight from the input with id as weight
     let height = parseFloat(document.getElementById("height").value) / 100; // Convert height to meters
     let bmi = weight / (height * height); // According to the formula
     document.getElementById("answer").value =
-      String(bmi.toPrecision(3)) + "kg/m^2"; // writing to the output
+      String(bmi.toPrecision(3)); // writing to the output
   
     if (bmi < 18.5) {
       document.getElementById("category").value = "Underweight";
@@ -29,13 +19,23 @@ function bmi() {
     } else if (bmi > 40) {
       document.getElementById("category").value = "Obese Class 3";
     }
-    let idealMale = 0.5*bmi**2+  }
+    let idealMale = 0.5*bmi**2+11.5 ;
+    let Age = document.getElementById("Gender").value;
+    let idealFemale=0.5*bmi**2+0.03*Age+11;
+    if (document.getElementById("Gender").value = "Male"){
+        document.getElementById("idealAnswer").value = idealMale; 
+    }
+    else if (document.getElementById("Gender").value = "Female"){
+        document.getElementById("idealAnswer").value = idealFemale
+}
+}
 
   function clearSum(){
       document.getElementById("height").value = "";
       document.getElementById("weight").value = "";
       document.getElementById("category").value = "";
       document.getElementById("answer").value = "";
+      document.getElementById("idealAnswer").value = "";
       document.getElementById("Age").value = "";
       document.getElementById("Gender").value = "";
       if (document.getElementById("Gender").value = "...choose"){
@@ -43,5 +43,12 @@ function bmi() {
       }
     }
 
+    function disableAge(){
+        if ( document.getElementById("Gender").value == "Male"){
+ document.getElementById("Age").disabled = true;
+    
+      }  else if (document.getElementById("Gender").value == "Female"){
+        document.getElementById("Age").disabled = false;
 
-   
+       }
+    }
