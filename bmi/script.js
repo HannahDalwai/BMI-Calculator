@@ -9,3 +9,5 @@ function clearSum(){
     answer = "";
     document.getElementById("ideal").value = answer;
     }
+
+    
