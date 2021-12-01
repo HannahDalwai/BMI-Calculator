@@ -8,34 +8,48 @@
 </head>
 <body>
       
-        <div id="output" ></div>
-   
-            <label for="validationWeight" class="form-label">Weight</label>
-            <input type="text" name="weight"  id="weight"> <br>
-
-             <label for="validationHeight" class="form-label">Height</label>
-             <input type="text" name="height"  id="height"> 
-             <br>
-             <label for="validationGender" class="form-label">Gender</label>
-              <select name="gender" id="gender">
-                <option selected disabled value="">Choose...</option>
-                 <option value="male">Male</option>
-                 <option value="female">Female</option>
-             </select> <br>
-             <label for="validationAge" class="form-label" >Age</label>
-             <input type="text" name="age" id="age">
-             <button type="submit" onclick="bmi()">Calculate</button>
-        
   
-                <!-- <h1>Calculate your ideal body mass</h1> -->
-                <label for="validationHeight" class="form-label">BMI</label>
-   
-       <input type="text" id="ideal" disabled>
-       <label for="validationHeight" class="form-label">Ideal BMI</label>
-      <input type="text" disabled>
-       <button onclick="clearSum()">Clear</button>
-    
+     <div class="container border border-secondary border-5">
+      <div class="row text-center">
+        <h3>BMI Calculator</h3>
+        Weight(in Kilograms)
+        <input
+          type="float"
+          id="weight"
+          placeholder="Weight in kg"
+        />
+        <br />
+        Height (in centimetres)
+        <input
+          type="float"
+          id="height" class="clear"
+          placeholder="Height in cm"/>
+        <br>
+        Gender
+         <select name="Gender"id="Gender">
+         <option value="disabled">...choose</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+         </select>
 
+        <br>
+        Age
+        <input class="clear" type="float" id="Age" placeholder="Age"/>
+        <br>
+        <input type="button" onclick="bmi()" value="Evaluate"/>
+        <br>
+        BMI
+        <input disabled id="answer" class="clear" type="text" placeholder="BMI"/>
+        <br>
+        Category
+        <input disabled class="clear" type="text" id="category" placeholder="Category"/>
+        <br>
+        <!-- <input type="reset" value="Reset"/> -->
+        <!-- <button onclick="clearSum()">Clear</button> -->
+        <input type="button" onclick="clearSum()" value="Reset"/>
+      </div>
+    </div>
+ 
 
  
 
